@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
+import LatestWorkSection from "@/components/sections/LatestWorkSection";
 import SkillSection from "@/components/sections/SkillSection";
 import Image from "next/image";
 
@@ -7,7 +8,8 @@ export default function Home() {
     <div className="text-center">
       {/* hero section */}
       <HeroSection />
-      <section>Latest work</section>
+      {/* Latest work */}
+      <LatestWorkSection />
       {/* Services */}
       {/* Skills */}
       <SkillSection />
