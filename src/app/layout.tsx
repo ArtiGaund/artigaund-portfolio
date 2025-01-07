@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <div className="flex">
             <div>
-              <Menubar />
+              {/* <Menubar /> */}
             </div>
             <div className="flex-1 flex">
                 <div className="flex-1">

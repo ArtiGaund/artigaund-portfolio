@@ -1,10 +1,13 @@
 import { AuroraBackground } from "../ui/aurora-background";
+import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
 
 export default function HeroSection() {
     return(
         <div>
             <AuroraBackground className="">
-                <div>Hero Section</div>
+                <BackgroundBeamsWithCollision className="">
+                <div className="text-white">Hero Section</div>
+                </BackgroundBeamsWithCollision>
             </AuroraBackground>
         </div>
     )

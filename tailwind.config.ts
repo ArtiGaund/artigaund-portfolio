@@ -31,7 +31,7 @@ export default {
             backgroundPosition: "100% 0%, 100% 0%",
           },
           to: {
-            backgroundPosition: "0% 100%, 0% 100%",
+            backgroundPosition: "350% 50%, 350% 50%",
           },
         },
       },
@@ -41,10 +41,16 @@ export default {
         black: {
           DEFAULT: '#000',
           100: '#000319',
-          101: '#111827'
+          101: '#111827',
+          rick1: '#141a27',
+          rick2: '#101928',
+          rick3: '#121928',
         },
         cyan: {
           950: '#083344',
+        },
+        green: {
+          midnight: '#254b53',
         }
       },
     },
