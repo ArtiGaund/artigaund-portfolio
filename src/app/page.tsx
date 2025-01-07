@@ -5,16 +5,17 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="text-center">
-      {/* hero section */}
-      <HeroSection />
-      {/* Latest work */}
-      <LatestWorkSection />
-      {/* Services */}
-      {/* Skills */}
-      <SkillSection />
-      {/* about */}
-{/* History */}
-    </div>
+   
+      <div className="relative text-center">
+        {/* hero section */}
+        <HeroSection />
+        {/* Latest work */}
+        <LatestWorkSection />
+        {/* Services */}
+        {/* Skills */}
+        <SkillSection />
+        {/* about */}
+  {/* History */}
+      </div>
   );
 }

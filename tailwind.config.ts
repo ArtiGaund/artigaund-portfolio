@@ -36,8 +36,16 @@ export default {
         },
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // background: "var(--background)",
+        // foreground: "var(--foreground)",
+        black: {
+          DEFAULT: '#000',
+          100: '#000319',
+          101: '#111827'
+        },
+        cyan: {
+          950: '#083344',
+        }
       },
     },
   },
