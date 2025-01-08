@@ -205,7 +205,7 @@ const cards = [
   {
     description: "Lana Del Rey",
     title: "Summertime Sadness",
-    src: "",
+    src: "/images/image1.jpeg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -228,7 +228,7 @@ const cards = [
   {
     description: "Babbu Maan",
     title: "Mitran Di Chhatri",
-    src: "",
+    src: "/images/image1.jpeg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -251,7 +251,7 @@ const cards = [
   {
     description: "Metallica",
     title: "For Whom The Bell Tolls",
-    src: "",
+    src: "/images/image1.jpeg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -273,7 +273,7 @@ const cards = [
   {
     description: "Lord Himesh",
     title: "Aap Ka Suroor",
-    src: "",
+    src: "/images/image1.jpeg",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {

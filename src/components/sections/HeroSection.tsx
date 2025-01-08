@@ -1,3 +1,4 @@
+"use client";
 import { AuroraBackground } from "../ui/aurora-background";
 import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
 
