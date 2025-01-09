@@ -40,7 +40,7 @@ export function SocialNetworkLink() {
         }
     ];
     return (
-        <div className="flex items-center justify-center bg-black h-[5rem] w-full">
+        <div className="flex items-center justify-center h-[5rem] w-full">
             <FloatingDock 
             mobileClassName="translate-y-20"
             items={links}

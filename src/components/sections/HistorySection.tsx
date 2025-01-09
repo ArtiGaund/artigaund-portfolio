@@ -70,7 +70,7 @@ const dummyContent = [
     ),
     badge: "React",
     image:
-      "/public/images/image1.jpeg"
+      "/images/image1.jpeg"
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -94,7 +94,7 @@ const dummyContent = [
     ),
     badge: "Changelog",
     image:
-      "/public/images/image1.jpeg"
+      "/images/image1.jpeg"
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -112,6 +112,6 @@ const dummyContent = [
     ),
     badge: "Launch Week",
     image:
-      "/public/images/image1.jpeg"
+      "/images/image1.jpeg"
   },
 ];

@@ -12,7 +12,7 @@ export default function Home() {
       <div className="relative text-center">
         {/* hero section */}
         <HeroSection />
-        {/* Latest work */}
+        {/* Latest work (onscreen error is coming from this component)*/}
         <LatestWorkSection />
         {/* Services */}
         <ServiceSection />
