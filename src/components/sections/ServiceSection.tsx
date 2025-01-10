@@ -61,7 +61,7 @@ export default function ServiceSection() {
   return (
     <div className="mt-[150px] flex flex-col">
         <div className="px-8 flex flex-col justify-center items-center">
-            <h2 className="mx-auto max-w-7xl ml-4 text-neutral-800 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
+            <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
                 Our Services
             </h2>
         </div>

@@ -1,5 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
-import LatestWorkSection from "@/components/sections/LatestWorkSection";
+import {LatestWorkSection} from "@/components/sections/LatestWorkSection";
 import ServiceSection from "@/components/sections/ServiceSection";
 import SkillSection from "@/components/sections/SkillSection";
 import Image from "next/image";
