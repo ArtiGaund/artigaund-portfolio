@@ -30,8 +30,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white`}
       >
         <div className="flex">
-            <div>
-              {/* <Menubar /> */}
+            <div className="fixed z-50">
+              <Menubar />
             </div>
             <div className="flex-1 flex">
                 <div className="flex-1">
