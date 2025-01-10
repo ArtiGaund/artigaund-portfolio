@@ -9,7 +9,7 @@ import HistorySection from "../components/sections/HistorySection";
 export default function Home() {
   return (
    
-      <div className="relative text-center">
+      <div className="relative">
         {/* hero section */}
         <HeroSection />
         {/* Latest work (onscreen error is coming from this component)*/}
