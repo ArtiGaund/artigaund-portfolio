@@ -1,25 +1,7 @@
-// "use client";
-// import { ExpandableCard } from "../cards/ExpandableCard";
-
-
-
-// export default function LatestWorkSection() {
-//     return(
-//         <div className="flex flex-row items-center justify-between">
-//             <div className="w-1/3">
-//                 Latest Work section
-//             </div> 
-//             <div className="w-2/3">
-//                 <ExpandableCard />
-//             </div>
-//         </div>
-//     )
-// }
-
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { Carousel, Card } from "@/components/ui/cards-carousel";
 
 export function LatestWorkSection() {
   const cards = data.map((card, index) => (
@@ -103,7 +85,7 @@ const data = [
   {
     category: "Hiring",
     title: "Hiring for a Staff Software Engineer",
-    src: "/images/image5.jpg",
+    src: "/images/image1.jpeg",
     content: <DummyContent />,
   },
 ];

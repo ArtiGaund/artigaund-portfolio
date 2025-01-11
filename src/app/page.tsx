@@ -9,17 +9,11 @@ export default function Home() {
   return (
    
       <div className="relative">
-        {/* hero section */}
         <HeroSection />
-        {/* Latest work (onscreen error is coming from this component)*/}
         <LatestWorkSection />
-        {/* Services */}
         <ServiceSection />
-        {/* Skills */}
         <SkillSection />
-        {/* about */}
         <AboutSection />
-        {/* History */}
         <HistorySection />
       </div>
   );
