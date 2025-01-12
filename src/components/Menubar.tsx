@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { ProjectsNavbar } from "./ui/ProjectsNavbar";
+import { ProjectsNavbar } from "./ProjectsNavbar";
 
 export default function Menubar() {
   const [isActive, setIsActive] = useState(false);

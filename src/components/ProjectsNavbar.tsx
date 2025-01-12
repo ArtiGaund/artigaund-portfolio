@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CompareDemo } from "./CompareDemo";
 
 export function ProjectsNavbar() {
   return (
@@ -14,12 +15,14 @@ export function ProjectsNavbar() {
           Mobile App Development
         </Link>
       </div>
-
+       {/* Middle Divider */}
+       <div className="h-[90%] w-[1px] bg-white"></div>
       {/* Right Column (Image) */}
       <div className="flex justify-center items-center flex-1">
-        <div className="bg-white w-40 h-40 flex items-center justify-center">
+        {/* <div className="bg-white w-40 h-40 flex items-center justify-center">
           Image
-        </div>
+        </div> */}
+        <CompareDemo />
       </div>
     </div>
   );
