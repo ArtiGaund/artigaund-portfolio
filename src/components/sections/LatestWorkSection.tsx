@@ -10,7 +10,10 @@ export function LatestWorkSection() {
 
   return (
     <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-200 font-sans">
+      {/* <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-200 font-sans">
+        Recent Projects
+      </h2> */}
+       <h2 className="mx-auto max-w-7xl pl-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
         Recent Projects
       </h2>
       <Carousel items={cards} />
