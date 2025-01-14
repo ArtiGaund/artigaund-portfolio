@@ -8,10 +8,18 @@ export default function HeroSection() {
         <div>
             <AuroraBackground className="">
                 <BackgroundBeamsWithCollision className="">
-                    <div className="relative flex flex-col">
-                        <div className="flex text-white">Hero Section</div>
-                        <div className="flex">
+                    <div className="relative flex flex-row">
+                        <div className="flex flex-col text-white bg-yellow-400 w-1/3 h-full">
+                            <p>Hero Section</p>
+                            <div className="flex">
                             <SocialNetworkLink />
+                        </div>
+                        </div>
+                        <div className="flex bg-pink-700 w-2/3 h-full">
+                            Middle part
+                        </div>
+                        <div className="flex bg-black w-3/3 h-full">
+                            Last part
                         </div>
                     </div>
                 </BackgroundBeamsWithCollision>
