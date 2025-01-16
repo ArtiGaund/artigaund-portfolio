@@ -9,7 +9,7 @@ export function LatestWorkSection() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="flex p-20 w-full h-full mt-[150px] justify-center items-center">
       {/* <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-200 font-sans">
         Recent Projects
       </h2> */}

@@ -8,8 +8,17 @@ import {
   IconBrandGoogle,
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
+import useAuth from "@/context/useAuth";
 
 export default function Login() {
+  const router = useRouter()
+  const { authStatus } = useAuth()
+  if(authStatus){
+    router.replace("/admin")
+    return <></>
+  }
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");

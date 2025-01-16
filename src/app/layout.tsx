@@ -35,7 +35,7 @@ export default function RootLayout({
               <Menubar />
             </div>
             <div className="flex-1 flex">
-                <div className="flex-1">
+                <div className="flex-1 justify-center items-center">
                   {children}
                 </div>
             </div>

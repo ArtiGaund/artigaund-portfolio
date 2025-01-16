@@ -33,7 +33,7 @@ export default function Menubar() {
           </div>
 
           {/* Menu Links */}
-          <Link className="text-white mx-4" href="/">
+          <Link className={`text-white mx-4 ${ isActive ? "text-gray-800 mx-4" : ""}`} href="/">
             Portfolio
           </Link>
           <span className="text-white">|</span>
