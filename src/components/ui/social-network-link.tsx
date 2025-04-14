@@ -25,7 +25,7 @@ export function SocialNetworkLink() {
             href: "https://github.com/ArtiGaund",
         },
         {
-            title: "X",
+            title: "Twitter",
             icon: (
                 <IconBrandX className="h-full w-full text-neutral-300"/>
             ),
@@ -40,9 +40,10 @@ export function SocialNetworkLink() {
         }
     ];
     return (
-        <div className="absolute top-[35rem] left-[4rem] -translate-y-1/2 z-50">
+        <div className="absolute top-[35rem] left-[4rem] -translate-y-1/2">
             <FloatingDock 
-                mobileClassName="translate-y-20"
+                // mobileClassName="translate-y-20"
+                desktopClassName="bg-gray-900"
                 items={links}
             />
         </div>
