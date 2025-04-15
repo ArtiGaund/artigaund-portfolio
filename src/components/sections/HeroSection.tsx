@@ -3,6 +3,7 @@ import ImageCard from "../cards/ImageCard";
 import Circle from "../sub-components/Circle";
 import { CodeBlock } from "../ui/code-block";
 import { SocialNetworkLink } from "../ui/social-network-link";
+import { SparklesCore } from "../ui/sparkles";
 
 
 
@@ -30,6 +31,18 @@ export default function HeroSection() {
   `;
 
     return(
+      // <div className="relative w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
+      // <div className="w-full absolute inset-0 h-screen">
+      //   <SparklesCore
+      //     id="tsparticlesfullpage"
+      //     background="transparent"
+      //     minSize={0.6}
+      //     maxSize={1.4}
+      //     particleDensity={100}
+      //     className="w-full h-full"
+      //     particleColor="#FFFFFF"
+      //   />
+      // </div>
              <div className="relative w-full h-screen overflow-hidden">
       {/* Left circles */}
       <Circle
@@ -60,7 +73,7 @@ export default function HeroSection() {
       <div className="absolute top-[150px] left-1/2 w-[150px] h-[1px] bg-white rounded-full"></div>
       {/* Title */}
       <div className="absolute top-[250px] left-[72rem] transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white z-30">
-        MY DIGITAL WORKBENCH
+        MY DIGITAL WORKBENCH 
       </div>
 
       {/* Name */}
@@ -127,6 +140,6 @@ export default function HeroSection() {
 
         <SocialNetworkLink />
         </div>
-
+        // </div>
     )
 }

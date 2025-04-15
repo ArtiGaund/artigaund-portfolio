@@ -1,17 +1,39 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ProjectsNavbar } from "./ProjectsNavbar";
 
 export default function Menubar() {
   const [isActive, setIsActive] = useState(false);
+  const [hidePortfolio, setHidePortfolio] = useState(false);
+
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const heroHeight = window.innerHeight * 0.9;
+      setHidePortfolio(scrollY>heroHeight);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const outerWidth = hidePortfolio ? "w-[11rem]" : "w-[17rem]";
+  const innerHeight = hidePortfolio ? "w-[10.5rem]" : "w-[16.3rem]";
+
+
 
   return (
     <div className="relative">
       {/* Menubar */}
-      <div className="relative z-20 w-[17rem] p-1 m-5 border-cyan-50 rounded-2xl border-2">
-        <div className="w-[16.3rem] p-5 border-cyan-50 rounded-lg border-2 flex items-center justify-between">
+     <div
+        className={`relative z-20 p-1 m-5 border-cyan-50 rounded-2xl border-2 transition-all duration-300 ${outerWidth}`}
+      >
+        <div
+          className={`p-5 border-cyan-50 rounded-lg border-2 flex items-center justify-between transition-all duration-300 ${innerWidth}`}
+        >
           {/* Hamburger/X Button */}
           <div
             onClick={() => setIsActive(!isActive)}
@@ -33,10 +55,23 @@ export default function Menubar() {
           </div>
 
           {/* Menu Links */}
-          <Link className={`text-white mx-4 ${ isActive ? "text-gray-800 mx-4" : ""}`} href="/">
+          {!hidePortfolio && (
+            <>
+            <Link className={`mx-4 transition-opacity duration-300 ${
+              isActive
+                ? "text-white opacity-40 pointer-events-none cursor-default"
+                : isActive
+                ? "text-gray-800"
+                : "text-white"
+            }`}
+            href="/">
             Portfolio
           </Link>
-          <span className="text-white">|</span>
+          <span className="text-white">|</span>  
+          </>
+        )
+          }
+          
           <Link className="text-white mx-4" href="/projects-page">
             Projects
           </Link>
