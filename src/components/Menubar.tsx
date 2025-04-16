@@ -87,7 +87,7 @@ export default function Menubar() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-green-900 z-10"
           >
-            <ProjectsNavbar />
+            <ProjectsNavbar onClose = { () => setIsActive(false) }/>
           </motion.div>
         )}
       </AnimatePresence>
