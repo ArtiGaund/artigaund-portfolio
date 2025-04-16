@@ -1,25 +1,27 @@
 "use client"
-
-import appwriteService from "@/appwrite/config";
 import useAuth from "@/context/useAuth";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import authService from "@/appwrite/config";
+import { logout } from "@/store/authSlice";
 
 
-const LogoutPage = () => {
+
+const LogoutButton = () => {
     const router = useRouter()
     const { setAuthStatus } = useAuth()
+    const dispatch = useDispatch()
 
-    useEffect(() => {
-        appwriteService.logout()
+    const logoutHandler = () => {
+        authService.logout()
         .then(() => {
-            setAuthStatus(false);
+            dispatch(logout())
             router.replace("/")
         })
-    }, [])
+    }
     return (
-        <></>
+        <button className="bg-white text-black" onClick={logoutHandler}>Logout</button>
     )
 }
 
-export default LogoutPage;
+export default LogoutButton;
