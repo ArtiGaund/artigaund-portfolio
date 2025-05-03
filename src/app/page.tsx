@@ -8,12 +8,12 @@ import HistorySection from "../components/sections/HistorySection";
 export default function Home() {
   return (
    
-      <div className="relative">
+      <div className="relative ">
         <HeroSection />
         <LatestWorkSection />
         <ServiceSection />
         <SkillSection />
-        <AboutSection />
+        {/* <AboutSection /> */}
         <HistorySection />
       </div>
   );

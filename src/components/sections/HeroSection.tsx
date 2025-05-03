@@ -3,6 +3,8 @@ import ImageCard from "../cards/ImageCard";
 import Circle from "../sub-components/Circle";
 import { CodeBlock } from "../ui/code-block";
 import { SocialNetworkLink } from "../ui/social-network-link";
+import { Vortex } from "../ui/vortex";
+import AboutSection from "./AboutSection";
 
 
 export default function HeroSection() {
@@ -45,16 +47,26 @@ export default function HeroSection() {
         opacity="opacity-80"
         shadow="shadow-[0px_0px_100px_40px_black]"
       />
-
-      <ImageCard 
-      width={450}
-      height={600}
-      color=" bg-red-700"
-      position="top-[-50px] left-[300px] z-20"
-      shadow="shadow-[0px_0px_100px_40px_black]"
+        <ImageCard 
+        width={475}
+        height={600}
+        // color=" bg-red-700"
+        position="top-[-50px] left-[300px] z-20"
+        shadow="shadow-[0px_0px_100px_40px_black]"
+        className="overflow-hidden"
+        >
+          <Vortex
+        backgroundColor="black"
+        rangeY={800}
+        particleCount={500}
+        // baseHue={120}
+        className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
       >
-        <div></div>
-        </ImageCard>
+          <div className="w-full h-full mt-10">
+            <AboutSection />
+          </div>
+          </Vortex>
+          </ImageCard>
       {/* White line */}
       <div className="absolute top-[150px] left-1/2 w-[150px] h-[1px] bg-white rounded-full"></div>
       {/* Title */}

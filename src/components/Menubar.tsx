@@ -7,6 +7,11 @@ import { ProjectsNavbar } from "./ProjectsNavbar";
 export default function Menubar() {
   const [isActive, setIsActive] = useState(false);
   const [hidePortfolio, setHidePortfolio] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   // Track scroll position
   useEffect(() => {
@@ -32,7 +37,7 @@ export default function Menubar() {
         className={`relative z-20 p-1 m-5 border-cyan-50 rounded-2xl border-2 transition-all duration-300 ${outerWidth}`}
       >
         <div
-          className={`p-5 border-cyan-50 rounded-lg border-2 flex items-center justify-between transition-all duration-300 ${innerWidth}`}
+          className={`p-5 border-cyan-50 rounded-lg border-2 flex items-center justify-between transition-all duration-300 ${innerHeight}`}
         >
           {/* Hamburger/X Button */}
           <div
@@ -55,15 +60,14 @@ export default function Menubar() {
           </div>
 
           {/* Menu Links */}
-          {!hidePortfolio && (
+          {hasMounted && !hidePortfolio && (
             <>
             <Link className={`mx-4 transition-opacity duration-300 ${
-              isActive
-                ? "text-white opacity-40 pointer-events-none cursor-default"
-                : isActive
-                ? "text-gray-800"
-                : "text-white"
-            }`}
+                isActive
+                  ? "text-white opacity-40 pointer-events-none cursor-default"
+                  : "text-white"
+              }`}
+
             href="/">
             Portfolio
           </Link>

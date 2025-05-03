@@ -40,11 +40,12 @@ export default function RootLayout({
                 <div className="flex-1 justify-center items-center">
                   {children}
                 </div>
+                {/* <div>
+                  <Footer />
+                </div> */}
             </div>
         </div>
-        <div>
-          <Footer />
-        </div>
+        
         </ReduxProvider>
       </body>
     </html>

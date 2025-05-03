@@ -43,8 +43,8 @@ export const AnimatedAboutSection = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+    <div className="max-w-sm mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+      <div className="relative grid grid-cols-1  gap-20">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -112,13 +112,13 @@ export const AnimatedAboutSection = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold dark:text-white text-black">
+            {/* <h3 className="text-2xl font-bold dark:text-white text-black">
               {testimonials[active].name}
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
-            </p>
-            <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
+            </p> */}
+            {/* <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -142,7 +142,7 @@ export const AnimatedAboutSection = ({
                   {word}&nbsp;
                 </motion.span>
               ))}
-            </motion.p>
+            </motion.p> */}
           </motion.div>
           {/* <div className="flex gap-4 pt-12 md:pt-0">
             <button
