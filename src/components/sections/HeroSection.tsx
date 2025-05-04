@@ -5,6 +5,7 @@ import { CodeBlock } from "../ui/code-block";
 import { SocialNetworkLink } from "../ui/social-network-link";
 import { Vortex } from "../ui/vortex";
 import AboutSection from "./AboutSection";
+import BgAnimation from "@/components/ui/BackgroundAnimation";
 
 
 export default function HeroSection() {
@@ -83,6 +84,7 @@ export default function HeroSection() {
       <div className="absolute top-[30rem] left-[72.5rem] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-gray-400 z-30">
       I’m a full-stack web and Android developer passionate about building modern, scalable applications. I typically work on frontend, backend, and mobile projects.
       </div>
+      <BgAnimation />
       {/* Right big circle */}
       <Circle
         size={500}
