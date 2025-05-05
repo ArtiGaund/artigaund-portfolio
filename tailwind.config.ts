@@ -65,7 +65,7 @@ export default {
         },
         green: {
           midnight: '#254b53',
-        }
+        },
       },
     },
   },

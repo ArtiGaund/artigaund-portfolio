@@ -31,6 +31,35 @@ export default function HistorySection() {
       title: "Education",
       content: (
         <div className="flex flex-col">
+          
+          <div>
+              <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
+                National Institute of Technology, Warangal (NITW)
+                </h4>
+          </div>
+          <span className="text-blue-400 my-[10px]">2017 - 2020</span>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Master Of Computer Applications (MCA)
+          </p>
+
+
+          <div>
+              <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
+                Bundelkhand University
+              </h4>
+          </div>
+          <span className="text-blue-400 my-[10px]">2014 - 2017</span>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Bachelor Of Science in Information Technology ( Bsc(I.T.) )
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "About Me",
+      content: (
+        <div className="flex flex-col">
+          
           <div>
               <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
                 National Institute of Technology, Warangal (NITW)
@@ -56,8 +85,15 @@ export default function HistorySection() {
     },
   ];
   return (
-    <div className="w-full">
-      <Timeline data={data} />
-    </div>
+    <section className="mt-[150px] flex flex-col justify-center items-center">
+       <div className="bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8">
+       <div className="px-8 flex flex-col justify-center items-center">
+            <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
+                History & Experience
+            </h2>
+        </div>
+          <Timeline data={data} />
+      </div>
+    </section>
   );
 }

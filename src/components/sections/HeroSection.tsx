@@ -32,7 +32,7 @@ export default function HeroSection() {
   `;
 
     return(
-             <div className="relative w-full h-screen overflow-hidden">
+             <section className="relative w-full h-screen overflow-hidden">
       {/* Left circles */}
       <Circle
         size={200}
@@ -69,9 +69,9 @@ export default function HeroSection() {
           </Vortex>
           </ImageCard>
       {/* White line */}
-      <div className="absolute top-[150px] left-1/2 w-[150px] h-[1px] bg-white rounded-full"></div>
+      <div className="absolute top-[180px] left-[55rem] w-[150px] h-[1px] bg-white rounded-full"></div>
       {/* Title */}
-      <div className="absolute top-[250px] left-[72rem] transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white z-30">
+      <div className="absolute top-[250px] left-[68rem] transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white z-30">
         MY DIGITAL WORKBENCH 
       </div>
 
@@ -81,7 +81,7 @@ export default function HeroSection() {
       </div>
 
       {/* Description */}
-      <div className="absolute top-[30rem] left-[72.5rem] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-gray-400 z-30">
+      <div className="absolute top-[30rem] left-[68rem] transform -translate-x-1/2 -translate-y-1/2 text-lg font-semibold text-gray-400 z-30">
       I’m a full-stack web and Android developer passionate about building modern, scalable applications. I typically work on frontend, backend, and mobile projects.
       </div>
       <BgAnimation />
@@ -139,6 +139,6 @@ export default function HeroSection() {
         {/* Social links */}
 
         <SocialNetworkLink />
-        </div>
+        </section>
     )
 }

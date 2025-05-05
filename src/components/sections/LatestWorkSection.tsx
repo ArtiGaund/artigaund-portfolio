@@ -9,15 +9,14 @@ export function LatestWorkSection() {
   ));
 
   return (
-    <div className="flex p-20 w-full h-full mt-[150px] justify-center items-center">
-      {/* <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-200 font-sans">
-        Recent Projects
-      </h2> */}
-       <h2 className="mx-auto max-w-7xl pl-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
-        Recent Projects
-      </h2>
-      <Carousel items={cards} />
-    </div>
+    <section className="w-full max-w-7xl mx-auto px-4 mt-24">
+      <div className="bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8">
+  <h2 className="text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans font-bold text-center mb-12">
+    Recent Projects
+  </h2>
+  <Carousel items={cards} />
+  </div>
+</section>
   );
 }
 

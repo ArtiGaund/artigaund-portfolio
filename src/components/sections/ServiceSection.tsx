@@ -9,6 +9,7 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from "@tabler/icons-react";
+import Divider from "../Divider";
 
 export default function ServiceSection() {
   const features = [
@@ -60,7 +61,10 @@ export default function ServiceSection() {
   ];
   return (
    
-    <div className="mt-[150px] flex flex-col justify-center items-center">
+    <section className="mt-[150px] flex flex-col justify-center items-center">
+      {/* Outter card */}
+      <div className="bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8">
+        <Divider className="absolute left-[200px]"/>
         <div className="px-8 flex flex-col justify-center items-center">
             <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
                 What Services I Offer ?
@@ -71,7 +75,8 @@ export default function ServiceSection() {
             <Feature key={feature.title} {...feature} index={index} />
         ))}
         </div>
-    </div>
+      </div>
+    </section>
     
   );
 }
