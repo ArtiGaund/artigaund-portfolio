@@ -10,6 +10,7 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 import Divider from "../Divider";
+import  Noise from  "@/components/ui/Noise"
 
 export default function ServiceSection() {
   const features = [
@@ -61,9 +62,18 @@ export default function ServiceSection() {
   ];
   return (
    
-    <section className="mt-[150px] flex flex-col justify-center items-center">
+    <section className="relative  mt-[150px] flex flex-col justify-center items-center">
       {/* Outter card */}
-      <div className="bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8">
+      <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <Noise
+            patternSize={250}
+            patternScaleX={1}
+            patternScaleY={1}
+            patternRefreshInterval={2}
+            patternAlpha={15}
+          />
+        </div>
         <Divider className="absolute left-[200px]"/>
         <div className="px-8 flex flex-col justify-center items-center">
             <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">

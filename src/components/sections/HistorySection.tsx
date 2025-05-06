@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import  Noise from  "@/components/ui/Noise"
+
 
 export default function HistorySection() {
   const data = [
@@ -86,14 +88,29 @@ export default function HistorySection() {
   ];
   return (
     <section className="mt-[150px] flex flex-col justify-center items-center">
-       <div className="bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8">
-       <div className="px-8 flex flex-col justify-center items-center">
-            <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
-                History & Experience
-            </h2>
-        </div>
-          <Timeline data={data} />
-      </div>
+       <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
+  {/* Noise Background */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    <Noise
+      patternSize={250}
+      patternScaleX={1}
+      patternScaleY={1}
+      patternRefreshInterval={2}
+      patternAlpha={15}
+    />
+  </div>
+
+  {/* All content above noise */}
+  <div className="relative z-10">
+    <div className="px-8 flex flex-col justify-center items-center">
+      <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 font-bold">
+        History & Experience
+      </h2>
+    </div>
+    <Timeline data={data} />
+  </div>
+</div>
+
     </section>
   );
 }

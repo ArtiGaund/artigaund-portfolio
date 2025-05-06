@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/cards-carousel";
+import  Noise from  "@/components/ui/Noise"
 
 export function LatestWorkSection() {
   const cards = data.map((card, index) => (
@@ -10,7 +11,16 @@ export function LatestWorkSection() {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 mt-24">
-      <div className="bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8">
+      <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
+              <div className="absolute inset-0 z-0 pointer-events-none">
+                <Noise
+                  patternSize={250}
+                  patternScaleX={1}
+                  patternScaleY={1}
+                  patternRefreshInterval={2}
+                  patternAlpha={15}
+                />
+              </div>
   <h2 className="text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans font-bold text-center mb-12">
     Recent Projects
   </h2>
