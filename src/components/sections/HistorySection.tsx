@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import  Noise from  "@/components/ui/Noise"
 
 
 export default function HistorySection() {
@@ -89,16 +88,7 @@ export default function HistorySection() {
   return (
     <section className="mt-[150px] flex flex-col justify-center items-center">
        <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
-  {/* Noise Background */}
-  <div className="absolute inset-0 z-0 pointer-events-none">
-    <Noise
-      patternSize={250}
-      patternScaleX={1}
-      patternScaleY={1}
-      patternRefreshInterval={2}
-      patternAlpha={15}
-    />
-  </div>
+  
 
   {/* All content above noise */}
   <div className="relative z-10">
