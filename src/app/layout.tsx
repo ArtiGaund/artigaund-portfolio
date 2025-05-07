@@ -5,6 +5,7 @@ import "./globals.css";
 import Menubar from "@/components/Menubar";
 import Footer from "@/components/Footer";
 import { ReduxProvider } from './redux-provider';
+import BackgroundGradient from "@/components/backgroundGradient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white`}
       >
        <ReduxProvider>
+        <BackgroundGradient />
         <div className="flex">
             <div className="fixed z-50">
               <Menubar />

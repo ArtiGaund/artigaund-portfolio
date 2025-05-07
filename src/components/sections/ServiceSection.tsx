@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import Divider from "../Divider";
 import  Noise from  "@/components/ui/Noise"
+import BackgroundGradient from "../backgroundGradient";
 
 export default function ServiceSection() {
   const features = [
@@ -61,7 +62,7 @@ export default function ServiceSection() {
     },
   ];
   return (
-   
+    // <BackgroundGradient >
     <section className="relative  mt-[150px] flex flex-col justify-center items-center">
       {/* Outter card */}
       <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
@@ -87,7 +88,7 @@ export default function ServiceSection() {
         </div>
       </div>
     </section>
-    
+    // </BackgroundGradient>
   );
 }
 
