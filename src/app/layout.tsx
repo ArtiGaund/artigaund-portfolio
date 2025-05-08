@@ -6,6 +6,7 @@ import Menubar from "@/components/Menubar";
 import { ReduxProvider } from './redux-provider';
 import BackgroundGradient from "@/components/backgroundGradient";
 import SmoothScroll from "@/components/SmoothScroll";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,23 +31,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white min-h-screen flex flex-col`}
       >
         <SmoothScroll>
-       <ReduxProvider>
-        <BackgroundGradient />
-        <div className="flex">
-            <div className="fixed z-50">
-              <Menubar />
+          <ReduxProvider>
+            <BackgroundGradient />
+            <div className="flex flex-col flex-1">
+              {/* Menubar */}
+              <div className="fixed z-50">
+                <Menubar />
+              </div>
+
+              {/* Main content area */}
+              <main className="flex-grow">
+                {children}
+              </main>
+
+              {/* Footer positioned at the bottom */}
+              <div className="mt-[150px] z-50">
+                <Footer />
+              </div>
             </div>
-            <div className="flex-1 flex">
-                <div className="flex-1 justify-center items-center">
-                  {children}
-                </div>
-            </div>
-        </div>
-        
-        </ReduxProvider>
+          </ReduxProvider>
         </SmoothScroll>
       </body>
     </html>

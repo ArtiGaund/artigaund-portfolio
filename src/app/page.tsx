@@ -13,7 +13,7 @@ export default function Home() {
         <ServiceSection />
         <SkillSection />
         <HistorySection />
-        <Footer />
+        {/* <Footer /> */}
       </div>
   );
 }
