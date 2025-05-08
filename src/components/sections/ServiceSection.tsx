@@ -10,6 +10,8 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 import Divider from "../Divider";
+import AnimatedContent from "../animation/AnimatedContent";
+import SectionTitle from "../sub-components/SectionTitle";
 
 export default function ServiceSection() {
   const features = [
@@ -60,16 +62,17 @@ export default function ServiceSection() {
     },
   ];
   return (
-    // <BackgroundGradient >
+    <AnimatedContent direction="vertical" distance={150} delay={200}>
     <section className="relative  mt-[150px] flex flex-col justify-center items-center">
       {/* Outter card */}
-      <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
-        <Divider className="absolute left-[200px]"/>
-        <div className="px-8 flex flex-col justify-center items-center">
-            <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold">
-                What Services I Offer ?
-            </h2>
-        </div>
+      <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
+        <SectionTitle
+         title="What Services I Offer ?" 
+         className="w-[30rem]"
+         />
+        
+        {/* <Divider className="absolute left-[200px]"/> */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
             <Feature key={feature.title} {...feature} index={index} />
@@ -77,7 +80,7 @@ export default function ServiceSection() {
         </div>
       </div>
     </section>
-    // </BackgroundGradient>
+    </AnimatedContent>
   );
 }
 

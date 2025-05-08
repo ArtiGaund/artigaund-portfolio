@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import AnimatedContent from "../animation/AnimatedContent";
+import SectionTitle from "../sub-components/SectionTitle";
 
 
 export default function HistorySection() {
@@ -86,21 +88,25 @@ export default function HistorySection() {
     },
   ];
   return (
-    <section className="mt-[150px] flex flex-col justify-center items-center">
-       <div className="relative bg-gray-800 border border-neutral-700 rounded-3xl shadow-lg w-full max-w-7xl p-8 overflow-hidden">
-  
-
+     <AnimatedContent direction="vertical" distance={150} delay={200}>
+    <section className="mt-[150px] flex flex-col justify-center items-center mb-[150px]">
+       <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
   {/* All content above noise */}
   <div className="relative z-10">
-    <div className="px-8 flex flex-col justify-center items-center">
+    <SectionTitle
+             title=" History & Experience" 
+             className="w-[30rem]"
+             />
+    {/* <div className="px-8 flex flex-col justify-center items-center">
       <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 font-bold">
-        History & Experience
+       
       </h2>
-    </div>
+    </div> */}
     <Timeline data={data} />
   </div>
 </div>
 
     </section>
+    </AnimatedContent>
   );
 }

@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Menubar from "@/components/Menubar";
-import Footer from "@/components/Footer";
 import { ReduxProvider } from './redux-provider';
 import BackgroundGradient from "@/components/backgroundGradient";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white`}
       >
+        <SmoothScroll>
        <ReduxProvider>
         <BackgroundGradient />
         <div className="flex">
@@ -42,13 +43,11 @@ export default function RootLayout({
                 <div className="flex-1 justify-center items-center">
                   {children}
                 </div>
-                {/* <div>
-                  <Footer />
-                </div> */}
             </div>
         </div>
         
         </ReduxProvider>
+        </SmoothScroll>
       </body>
     </html>
   );
