@@ -4,6 +4,8 @@ import React from "react";
 import { getProjectPosts } from "@/backend/notion";
 import ProjectContentCard from "@/components/cards/ProjectContentCard";
 import SectionTitle from "@/components/sub-components/SectionTitle";
+import Circle from "@/components/sub-components/Circle";
+
 
 
 export async function generateStaticParams() {
@@ -44,12 +46,60 @@ interface Project {
   
     return (
       <div className="text-center">
-        <div className="mt-[150px] relative bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
-            <h1 className="text-3xl font-bold mb-6 capitalize">
-            {category} Development Projects
-            </h1>
-        </div>
-        
+        <section className="relative flex flex-col justify-center items-center">
+          <div className="relative flex flex-row w-full h-[20rem]">
+              <div className="relative flex justify-center items-center w-2/3 top-[4rem]">
+                <h1
+                    className="text-6xl h-[70px] font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 drop-shadow-lg capitalize"
+                  >
+                    {category} Development Projects
+                  </h1>
+
+
+              </div>
+              <div className="relative flex w-1/3">
+                <div className="relative flex bg-gradient-to-br from-purple-500 via-purple-700 to-black w-[150px] h-[35px]
+                 rounded-2xl top-[10rem] right-[7rem] overflow-hidden"></div>
+                 <div className="relative flex bg-gradient-to-br from-purple-500 via-purple-700 to-black w-[50px] h-[35px]
+                 rounded-2xl top-[10rem] right-[20rem] overflow-hidden"></div>
+                 <div className="relative flex bg-gradient-to-br from-purple-500 via-purple-700 to-black w-[100px] h-[35px]
+                 rounded-2xl top-[15rem] right-[17rem] overflow-hidden"></div>
+                 <Circle
+                        size={600}
+                       gradient="bg-gradient-to-br from-purple-500 via-purple-700 to-black"
+                        position="top-[-50px] right-[-100px]"
+                        opacity="opacity-80"
+                        shadow="shadow-[0px_0px_100px_40px_black]"
+                      />
+                {/* <Circle
+                        size={500}
+                       gradient="bg-gradient-to-br from-purple-500 via-purple-700 to-black"
+                        position="top-[0px] right-[-65px]"
+                        opacity="opacity-80"
+                        shadow="shadow-[0px_0px_100px_40px_black]"
+                      /> */}
+                {/* Gif */}
+                <div className="rounded-full absolute bg-gradient-to-br from-red-500/80 via-red-700/80 to-black/80 w-[500px] 
+h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hidden">
+
+                    {/* <img 
+                    src="/images/web_animation.gif"
+                     alt="Web animation gif"
+                     className="w-full h-full"
+                    /> */}
+                    <video
+                    src="/videos/web_animation.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                    style={{ imageRendering: 'auto', transform: 'translateZ(0)' }}
+                  />
+                </div>
+              </div>
+          </div>
+        </section>
         {/* Ongoing Projects section */}
         { ongoingProjects.length > 0 && (<section className="relative  mt-[150px] flex flex-col justify-center items-center">
         <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">

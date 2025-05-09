@@ -17,7 +17,7 @@ export default function Footer() {
                     <a href="https://twitter.com/knyttneve" className="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
                 </p> */}
                 <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                <SocialNetworkLink />
+                {/* <SocialNetworkLink /> */}
                 </span>
             </div>
         </footer>

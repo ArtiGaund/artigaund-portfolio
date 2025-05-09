@@ -7,29 +7,14 @@ import { SocialNetworkLink } from "../ui/social-network-link";
 import { Vortex } from "../ui/vortex";
 import AboutSection from "./AboutSection";
 import BgAnimation from "@/components/ui/BackgroundAnimation";
-import { useRouter } from "next/router";
+
+
 
 
 export default function HeroSection() {
-
+    
   
-  // const [isClient, setIsClient] = useState(false); // Track client-side mounting
-  // // State to control the rendering of SocialNetworkLink
-  // const [shouldRenderSocialLink, setShouldRenderSocialLink] = useState(false);
-  // const router = useRouter();
-  // useEffect(() => {
-  //   setIsClient(true); // Only set this when the component is mounted on the client
-  // }, []);
 
-  // // useEffect to set state based on the current route
-  // useEffect(() => {
-  //   console.log("Current pathname:", router.pathname);  // Debugging line
-  //   if (isClient && router.pathname === "/") {
-  //     setShouldRenderSocialLink(true);
-  //   } else {
-  //     setShouldRenderSocialLink(false);
-  //   }
-  // }, [router.pathname]); // Dependency array ensures this runs when pathname changes
   const code = `const DummyComponent = () => {
     const [count, setCount] = React.useState(0);
    
@@ -52,8 +37,6 @@ export default function HeroSection() {
   };
   `;
 
-  // Prevent rendering on the server
-  // if (!isClient) return null;
     return(
              <section className="relative w-full h-screen overflow-hidden">
       {/* Left circles */}
@@ -160,7 +143,7 @@ export default function HeroSection() {
       {/* White line */}
       <div className="absolute top-[280px] left-[100px] w-[1px] h-[120px] bg-white rounded-full"></div>
         {/* Social links */}
-      { <SocialNetworkLink />}
+       <SocialNetworkLink />
         </section>
     )
 }
