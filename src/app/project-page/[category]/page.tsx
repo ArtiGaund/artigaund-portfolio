@@ -107,9 +107,11 @@ h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hid
                    title="Ongoing Projects" 
                    className="w-[30rem]"
                    />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {ongoingProjects.map((project) => (
             <ProjectContentCard key={project.id} project={project} />
           ))}
+          </div>
           </div>
         </section>)}
           
@@ -120,9 +122,11 @@ h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hid
                    title="Completed Projects" 
                    className="w-[30rem]"
                    />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {completeProjects.map((project) => (
             <ProjectContentCard key={project.id} project={project} />
           ))}
+          </div>
           </div>
         </section>
 
