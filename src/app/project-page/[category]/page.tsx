@@ -1,3 +1,4 @@
+export const dynamicParams = true; // Enable dynamic params for fallback pages
 
 import React from "react";
 
@@ -5,6 +6,7 @@ import { getProjectPosts } from "@/backend/notion";
 import ProjectContentCard from "@/components/cards/ProjectContentCard";
 import SectionTitle from "@/components/sub-components/SectionTitle";
 import Circle from "@/components/sub-components/Circle";
+import { Project } from "@/store/projectStore";
 
 
 
@@ -15,17 +17,17 @@ export async function generateStaticParams() {
     category,
   }));
 }
-interface Project {
-    id: string;
-    title: string;
-    shortDescription: string;
-    fullContent: string;
-    liveLink: string;
-    githubLink: string;
-    thumbnail: string;
-    technologies: string[];
-    status: string;
-  }
+// interface Project {
+//     id: string;
+//     title: string;
+//     shortDescription: string;
+//     fullContent: string;
+//     liveLink: string;
+//     githubLink: string;
+//     thumbnail: string;
+//     technologies: string[];
+//     status: string;
+//   }
   
   interface Props {
     params: {
@@ -33,9 +35,9 @@ interface Project {
     };
   }
   
-  export default async function ProjectsPage({ params }: Props) {
+  export default async function ProjectsPage(props: Props) {
     const projects: Project[] = await getProjectPosts();
-    const { category } = params;
+    const { category } = props.params;
   
     const ongoingProjects = projects.filter(
       (project) => project.status !== "Done"
@@ -109,7 +111,7 @@ h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hid
                    />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {ongoingProjects.map((project) => (
-            <ProjectContentCard key={project.id} project={project} />
+            <ProjectContentCard key={project.id} project={project} category={category}/>
           ))}
           </div>
           </div>
@@ -124,7 +126,7 @@ h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hid
                    />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {completeProjects.map((project) => (
-            <ProjectContentCard key={project.id} project={project} />
+            <ProjectContentCard key={project.id} project={project} category={category}/>
           ))}
           </div>
           </div>

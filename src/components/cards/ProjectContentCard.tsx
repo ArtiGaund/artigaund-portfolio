@@ -1,15 +1,18 @@
+"use client";
 import AnimatedContent from "../animation/AnimatedContent";
-interface Project {
-  id: string;
-  title: string;
-  shortDescription: string;
-  fullContent: string;
-  liveLink: string;
-  githubLink: string;
-  thumbnail: string;
-  technologies: string[];
-  status: string;
-}
+import { useRouter } from "next/navigation"; 
+import { Project } from "@/store/projectStore";
+// interface Project {
+//   id: string;
+//   title: string;
+//   shortDescription: string;
+//   fullContent: string;
+//   liveLink: string;
+//   githubLink: string;
+//   thumbnail: string;
+//   technologies: string[];
+//   status: string;
+// }
 import { 
     IconBrandGithub,
     IconExternalLink
@@ -17,11 +20,19 @@ import {
 
 interface ProjectContentCardProps {
   project: Project;
+  category: string;
 }
 
-export default function ProjectContentCard({ project }: ProjectContentCardProps) {
-  console.log("Project data:", project);
+
+
+export default function ProjectContentCard({ project, category }: ProjectContentCardProps) {
+  const router = useRouter()
+
   
+  const handleReadMode = () => {
+    console.log("Project data in card:", project);
+    router.push(`/project-page/${category}/${project.id}`)
+  }
 
   return (
     <AnimatedContent direction="vertical" distance={150} delay={200}>
@@ -66,6 +77,7 @@ export default function ProjectContentCard({ project }: ProjectContentCardProps)
         active:shadow-none disabled:pointer-events-none disabled:opacity-50
         disabled:shadow-none bg-white text-slate-900 hover:bg-slate-200"
       type="button"
+      onClick={handleReadMode}
     >
       Read more
     </button>

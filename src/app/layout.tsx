@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Menubar from "@/components/Menubar";
-import { ReduxProvider } from './redux-provider';
 import BackgroundGradient from "@/components/backgroundGradient";
 import SmoothScroll from "@/components/SmoothScroll";
 import Footer from "@/components/Footer";
@@ -34,7 +33,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white min-h-screen flex flex-col`}
       >
         <SmoothScroll>
-          <ReduxProvider>
             <BackgroundGradient />
             <div className="flex flex-col flex-1">
               {/* Menubar */}
@@ -52,7 +50,6 @@ export default function RootLayout({
                 <Footer />
               </div>
             </div>
-          </ReduxProvider>
         </SmoothScroll>
       </body>
     </html>
