@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { Project } from "@/store/projectStore";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -159,7 +160,7 @@ export const Card = ({
   index,
   layout = false,
 }: {
-  card: Card;
+  card: Project;
   index: number;
   layout?: boolean;
 }) => {
@@ -224,7 +225,7 @@ export const Card = ({
                 layoutId={layout ? `category-${card.title}` : undefined}
                 className="text-base font-medium text-black dark:text-white"
               >
-                {card.category}
+                {/* {card.category} */} {card.title}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
@@ -232,7 +233,7 @@ export const Card = ({
               >
                 {card.title}
               </motion.p>
-              <div className="py-10">{card.content}</div>
+              <div className="py-10">{card.shortDescription}</div>
             </motion.div>
           </div>
         )}
@@ -244,12 +245,12 @@ export const Card = ({
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
-          <motion.p
+          {/* <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
             className="text-white text-sm md:text-base font-medium font-sans text-left"
           >
             {card.category}
-          </motion.p>
+          </motion.p> */}
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
             className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
@@ -258,7 +259,7 @@ export const Card = ({
           </motion.p>
         </div>
         <BlurImage
-          src={card.src}
+          src={card.thumbnail}
           alt={card.title}
           fill
           className="object-cover absolute z-10 inset-0"
