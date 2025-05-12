@@ -4,7 +4,21 @@ import { twMerge } from "tailwind-merge"
 import { HiDocumentText } from "react-icons/hi"
 import { motion } from "framer-motion"
 
-export const IconContainer = ({ icon, text, delay }: any) => {
+interface IconContainerProps {
+    icon?: React.ReactNode;
+    text?: string;
+    delay?: number;
+    slowLabel?: boolean;
+    size?: number;
+}
+
+export const IconContainer = ({
+    icon,
+    text,
+    delay=0,
+    slowLabel=false,
+    size=48,
+ }: IconContainerProps) => {
     return(
         <motion.div
         initial={{

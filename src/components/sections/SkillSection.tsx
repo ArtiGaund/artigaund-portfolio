@@ -5,9 +5,58 @@ import { IconContainer } from "../radar/IconContainer";
 import { AiFillDollarCircle } from "react-icons/ai";
 import AnimatedContent from "../animation/AnimatedContent";
 import SectionTitle from "../sub-components/SectionTitle";
+import { 
+  FaDatabase,
+  
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiJavascript,
+  SiTypescript,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiFramer,
+  SiShadcnui,
+  SiRedux,
+  SiMongodb,
+  SiPostgresql,
+  SiMysql,
+  SiJquery,
+  SiCloudinary,
+  SiDocker,
+  SiClerk,
+  SiAxios,
+  SiHtml5,
+  SiCss3,
+  SiSass,
+  SiGit,
+  SiGithub,
+  SiPython,
+  SiReact,
+  SiAndroid,
+  SiFlutter,
+} from "react-icons/si";
 
-
-
+const iconData = [
+  { icon: <SiReact className="h-6 w-6 text-sky-400 z-20" />, text: "React", x: "40%", y: "50%" },
+  { icon: <SiAndroid className="h-6 w-6 text-green-500 z-20" />, text: "Android", x: "70%", y: "30%" },
+  { icon: <FaDatabase className="h-6 w-6 text-yellow-500 z-20" />, text: "Database", x: "60%", y: "20%" },
+  { icon: <SiNextdotjs className="h-6 w-6 text-white z-20" />, text: "Next.js", x: "40%", y: "80%" },
+  { icon: <SiJavascript className="h-6 w-6 text-yellow-500 z-20" />, text: "JavaScript", x: "30%", y: "70%" },
+  { icon: <SiTypescript className="h-6 w-6 text-blue-600 z-20" />, text: "TypeScript", x: "70%", y: "70%" },
+  { icon: <SiNodedotjs className="h-6 w-6 text-green-500 z-20" />, text: "Node.js", x: "30%", y: "30%" },
+  { icon: <SiTailwindcss className="h-6 w-6 text-cyan-400 z-20" />, text: "Tailwind CSS", x: "50%", y: "10%" },
+  { icon: <SiFramer className="h-6 w-6 text-violet-400 z-20" />, text: "Framer Motion", x: "60%", y: "90%" },
+  { icon: <SiShadcnui className="h-6 w-6 text-violet-400 z-20" />, text: "Shadcn UI", x: "40%", y: "10%" },
+  { icon: <SiRedux className="h-6 w-6 text-violet-400 z-20" />, text: "Redux Toolkit", x: "50%", y: "40%" },
+  { icon: <SiMongodb className="h-6 w-6 text-green-500 z-20" />, text: "MongoDB", x: "20%", y: "40%" },
+  { icon: <SiPostgresql className="h-6 w-6 text-blue-600 z-20" />, text: "PostgreSQL", x: "60%", y: "60%" },
+  { icon: <SiMysql className="h-6 w-6 text-yellow-500 z-20" />, text: "MySQL", x: "80%", y: "40%" },
+  { icon: <SiJquery className="h-6 w-6 text-blue-600 z-20" />, text: "jQuery", x: "20%", y: "70%" },
+  { icon: <SiCloudinary className="h-6 w-6 text-cyan-400 z-20" />, text: "Cloudinary", x: "50%", y: "80%" },
+  { icon: <SiDocker className="h-6 w-6 text-cyan-400 z-20" />, text: "Docker", x: "70%", y: "50%" },
+  
+];
 export default function SkillSection() {
   return (
     <section className="w-full flex flex-col items-center justify-center mt-[150px] px-4 overflow-hidden">
@@ -23,37 +72,53 @@ export default function SkillSection() {
           <div className=" mt-[150px] relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 p-8 h-1/2">
           
             <SectionTitle
-                     title="Skill Detail" 
-                     className="w-[15rem]"
+                     title="Technologies I Work With —" 
+                     className="w-[20rem]"
                      />
             <p className="text-gray-400 mb-6 text-base">
-              Here are the main areas I focus on — from building responsive web
-              apps to developing modern Android experiences.
+              A versatile skill set spanning frontend, backend, databases, and mobile development — enabling
+               me to build full-featured, modern apps.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <IconContainer text="Web Development" delay={0.2} />
-              <IconContainer
-                text="Mobile App"
-                delay={0.4}
-                icon={<AiFillDollarCircle className="h-8 w-8 text-slate-600" />}
-              />
-            </div>
+            
           </div>
         </AnimatedContent>
 
         {/* Right Card */}
-        <AnimatedContent
-          className="w-full lg:w-2/3"
-          direction="vertical"
-          distance={150}
-          delay={300}
+       <AnimatedContent
+  className="w-full lg:w-2/3"
+  direction="vertical"
+  distance={150}
+  delay={300}
+>
+  <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 p-8 h-full">
+    <div className="relative w-full h-[24rem] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] flex items-center justify-center m-[30px]">
+      <Radar className="absolute z-10 w-[16rem] h-[16rem]" />
+      {/* <IconContainer
+        text="Web Development"
+        delay={0.3}
+        icon={<AiFillDollarCircle className="h-8 w-8 text-sky-500" />}
+        className="absolute z-20"
+      /> */}
+      {iconData.map((item,idx) => (
+        <div
+        key={idx}
+        className="absolute"
+        style={{
+          left: item.x,
+          top: item.y,
+          transform: "translate(-50%, -50%)",
+        }}
         >
-          <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 p-8 h-full">
-            <div className="relative w-full h-[24rem] sm:h-[28rem] md:h-[32rem] lg:h-[36rem]">
-              <Radar className="w-full h-full overflow-hidden" />
-            </div>
+          <IconContainer
+            text={item.text}
+            delay={idx * 0.1}
+            icon={item.icon}
+          />
           </div>
-        </AnimatedContent>
+      ))}
+    </div>
+  </div>
+</AnimatedContent>
         
       </div>
     </section>
