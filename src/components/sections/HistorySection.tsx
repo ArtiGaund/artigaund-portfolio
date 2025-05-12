@@ -59,33 +59,26 @@ export default function HistorySection() {
       ),
     },
     {
-      title: "About Me",
-      content: (
-        <div className="flex flex-col">
-          
-          <div>
-              <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
-                National Institute of Technology, Warangal (NITW)
-                </h4>
-          </div>
-          <span className="text-blue-400 my-[10px]">2017 - 2020</span>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Master Of Computer Applications (MCA)
-          </p>
+  title: "About Me",
+  content: (
+    <div className="flex flex-col gap-4 text-neutral-200 text-4xl md:text-sm font-normal">
+      <p>
+        I’m a developer passionate about building clean, efficient, and user-focused digital experiences.
+        Whether it’s crafting full-stack web apps with React and Next.js or building intuitive Android
+        apps using Kotlin and Jetpack Compose, I love bringing ideas to life through code.
+      </p>
+      <p>
+        With a strong foundation in both frontend and backend development, I focus on writing scalable,
+        maintainable solutions that balance functionality and design.
+      </p>
+      <p>
+        Beyond building, I enjoy learning and contributing to open-source, constantly evolving my skills
+        to stay in sync with modern development trends.
+      </p>
+    </div>
+  ),
+}
 
-
-          <div>
-              <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
-                Bundelkhand University
-              </h4>
-          </div>
-          <span className="text-blue-400 my-[10px]">2014 - 2017</span>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Bachelor Of Science in Information Technology ( Bsc(I.T.) )
-          </p>
-        </div>
-      ),
-    },
   ];
   return (
      <AnimatedContent direction="vertical" distance={150} delay={200}>

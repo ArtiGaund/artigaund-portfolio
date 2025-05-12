@@ -35,6 +35,7 @@ import {
   SiReact,
   SiAndroid,
   SiFlutter,
+  SiPostman,
 } from "react-icons/si";
 
 const iconData = [
@@ -55,6 +56,13 @@ const iconData = [
   { icon: <SiJquery className="h-6 w-6 text-blue-600 z-20" />, text: "jQuery", x: "20%", y: "70%" },
   { icon: <SiCloudinary className="h-6 w-6 text-cyan-400 z-20" />, text: "Cloudinary", x: "50%", y: "80%" },
   { icon: <SiDocker className="h-6 w-6 text-cyan-400 z-20" />, text: "Docker", x: "70%", y: "50%" },
+  { icon: <SiPostman className="h-6 w-6 text-cyan-400 z-20" />, text: "Postman", x: "30%", y: "50%" },
+  { icon: <SiClerk className="h-6 w-6 text-violet-400 z-20" />, text: "Clerk", x: "80%", y: "30%" },
+  { icon: <SiAxios className="h-6 w-6 text-violet-400 z-20" />, text: "Axios", x: "20%", y: "90%" },
+  { icon: <SiHtml5 className="h-6 w-6 text-orange-500 z-20" />, text: "HTML", x: "30%", y: "10%" },
+  { icon: <SiCss3 className="h-6 w-6 text-blue-600 z-20" />, text: "CSS", x: "90%", y: "90%" },
+  { icon: <SiSass className="h-6 w-6 text-pink-500 z-20" />, text: "Sass", x: "10%", y: "90%" },
+  
   
 ];
 export default function SkillSection() {
