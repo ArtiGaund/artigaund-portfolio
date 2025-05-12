@@ -15,52 +15,56 @@ import SectionTitle from "../sub-components/SectionTitle";
 
 export default function ServiceSection() {
   const features = [
-    {
-      title: "Built for developers",
-      description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
-    },
-    {
-      title: "Ease of use",
-      description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />,
-    },
-    {
-      title: "Pricing like no other",
-      description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconCurrencyDollar />,
-    },
-    {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
-      icon: <IconCloud />,
-    },
-    {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
-      icon: <IconRouteAltLeft />,
-    },
-    {
-      title: "24/7 Customer Support",
-      description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
-    },
-    {
-      title: "Money back guarantee",
-      description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
-    },
-    {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
-      icon: <IconHeart />,
-    },
-  ];
+  {
+    title: "Full-Stack Web Development",
+    description:
+      "Building responsive, scalable, and secure web apps using modern frameworks like React, Next.js, and Node.js.",
+    icon: <IconTerminal2 />,
+  },
+  {
+    title: "Android App Development",
+    description:
+      "Crafting intuitive and performant Android apps with Kotlin, Jetpack Compose, and modern architecture.",
+    icon: <IconEaseInOut />,
+  },
+  {
+    title: "UI/UX Implementation",
+    description:
+      "Translating designs into smooth, pixel-perfect interfaces that elevate user experience.",
+    icon: <IconHeart />,
+  },
+  {
+    title: "API Design & Integration",
+    description:
+      "Creating and integrating RESTful APIs and third-party services to power robust app functionality.",
+    icon: <IconRouteAltLeft />,
+  },
+  {
+    title: "Real-time Features",
+    description:
+      "Implementing real-time updates using sockets or Firebase to enhance collaboration and interactivity.",
+    icon: <IconCloud />,
+  },
+  {
+    title: "Database & Backend",
+    description:
+      "Designing efficient data models and backend logic using MongoDB, PostgreSQL, Firebase, or Supabase.",
+    icon: <IconAdjustmentsBolt />,
+  },
+  {
+    title: "Project Collaboration",
+    description:
+      "Working seamlessly with teams using Git, CI/CD, and Agile practices for efficient delivery.",
+    icon: <IconHelp />,
+  },
+  {
+    title: "Clean, Maintainable Code",
+    description:
+      "Writing modular, reusable, and well-documented code that scales with your application.",
+    icon: <IconCurrencyDollar />,
+  },
+];
+
   return (
     <AnimatedContent direction="vertical" distance={150} delay={200}>
     <section className="relative  mt-[150px] flex flex-col justify-center items-center">
@@ -98,16 +102,19 @@ const Feature = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l border-neutral-800",
-        index < 4 && "lg:border-b border-neutral-800"
+        "flex flex-col transition duration-300 hover:shadow-[0_0_20px_rgba(0,200,255,0.2)] lg:border-r py-10 relative group/feature border-white/10",
+        (index === 0 || index === 4) && "lg:border-l border-white/10",
+        index < 4 && "lg:border-b border-white/10"
       )}
+
     >
       {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-800 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-300 absolute inset-0 h-full w-full bg-gradient-to-t from-blue-500/10 to-transparent pointer-events-none" />
+
       )}
       {index >= 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-800 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-300 absolute inset-0 h-full w-full bg-gradient-to-b from-blue-500/10 to-transparent pointer-events-none" />
+
       )}
       <div className="mb-4 relative z-10 px-10 text-neutral-400">
         {icon}
