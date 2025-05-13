@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Arti Portfolio",
   description: "Arti Gaund Portfolio Website",
+  icons: {
+    icon: "/images/logo.png"
+  }
 };
 
 export default function RootLayout({
