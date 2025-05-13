@@ -21,13 +21,13 @@
 
 ## :dart: About ##
 
-Describe your project
+Artigaund Portfolio is a project designed to showcase your work, skills, and achievements in a professional and visually appealing way.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Responsive design;\
+:heavy_check_mark: Easy to customize;\
+:heavy_check_mark: Built with modern web technologies.
 
 ## :rocket: Technologies ##
 
@@ -59,15 +59,3 @@ $ yarn
 $ yarn start
 
 # The server will initialize in the <http://localhost:3000>
-```
-
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
-
-
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
-
-&#xa0;
-
-<a href="#top">Back to top</a>
