@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import ImageCard from "../cards/ImageCard";
 import Circle from "../sub-components/Circle";
 import { CodeBlock } from "../ui/code-block";
@@ -38,7 +37,7 @@ export default function HeroSection() {
   `;
 
     return(
-             <section className="relative w-full h-screen overflow-hidden">
+             <section className="relative w-full  h-screen overflow-hidden">
       {/* Left circles */}
       <Circle
         size={200}

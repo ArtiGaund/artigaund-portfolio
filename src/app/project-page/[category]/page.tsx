@@ -38,11 +38,18 @@ export async function generateStaticParams() {
   export default async function ProjectsPage(props: Props) {
     const projects: Project[] = await getProjectPosts();
     const { category } = props.params;
+
+    const filteredProjects = projects.filter(
+      (project) => project.category === category
+    );
   
-    const ongoingProjects = projects.filter(
+    console.log("All Projects", projects);
+    console.log("Filtered Projects", filteredProjects);
+  
+    const ongoingProjects = filteredProjects.filter(
       (project) => project.status !== "Done"
     );
-    const completeProjects = projects.filter(
+    const completeProjects = filteredProjects.filter(
       (project) => project.status === "Done"
     );
   

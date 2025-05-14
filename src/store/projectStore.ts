@@ -10,5 +10,6 @@ export interface Project {
   thumbnail: string;
   technologies: string[];
   status: string;
+  category: string;
 }
 

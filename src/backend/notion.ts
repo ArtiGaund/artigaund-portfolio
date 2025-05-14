@@ -22,6 +22,7 @@ export async function getProjectPosts() {
         thumbnail: project.properties["Thumbnail image url"]?.url || "",
         technologies: project.properties["Technologies used"]?.multi_select?.map((tech: any) => tech.name) || [],
         status: project.properties["Project Status"]?.status?.name,
+        category: project.properties["Category"]?.select?.name
     }))
     // return response.results.map((project: any) => {
     //     console.log("Project data ",project);
