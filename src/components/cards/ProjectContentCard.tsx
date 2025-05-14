@@ -2,22 +2,12 @@
 import AnimatedContent from "../animation/AnimatedContent";
 import { useRouter } from "next/navigation"; 
 import { Project } from "@/store/projectStore";
-// interface Project {
-//   id: string;
-//   title: string;
-//   shortDescription: string;
-//   fullContent: string;
-//   liveLink: string;
-//   githubLink: string;
-//   thumbnail: string;
-//   technologies: string[];
-//   status: string;
-// }
+
 import { 
     IconBrandGithub,
     IconExternalLink
     } from "@tabler/icons-react"
-
+import Image from "next/image";
 interface ProjectContentCardProps {
   project: Project;
   category: string;
@@ -39,13 +29,12 @@ export default function ProjectContentCard({ project, category }: ProjectContent
     <div className="relative flex flex-col w-80 h-[500px] rounded-lg border border-slate-700 shadow-sm bg-slate-900">
 
       <div className="relative h-56 overflow-hidden rounded-md">
-        <img
+        <Image
           className="object-cover w-full h-full rounded-md"
-          src={
-            project.thumbnail ||
-            "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-          }
+          src={ project.thumbnail }
           alt={project.title}
+          width={800}
+          height={600}
         />
       </div>
       <div className="p-4">

@@ -14,6 +14,7 @@ interface Props{
         project: string;
     }
 }
+import Image from "next/image";
 export const dynamicParams = true;
 export default async function ProjectPage(props: Props) {
     const { category, project: projectId} = props.params;
@@ -46,12 +47,7 @@ export default async function ProjectPage(props: Props) {
                   </h1>
               </div>
               <div className="relative flex w-1/3">
-                              {/* <div className="relative flex bg-gradient-to-br from-purple-500 via-purple-700 to-black w-[150px] h-[35px]
-                               rounded-2xl top-[10rem] right-[7rem] overflow-hidden"></div>
-                               <div className="relative flex bg-gradient-to-br from-purple-500 via-purple-700 to-black w-[50px] h-[35px]
-                               rounded-2xl top-[10rem] right-[20rem] overflow-hidden"></div>
-                               <div className="relative flex bg-gradient-to-br from-purple-500 via-purple-700 to-black w-[100px] h-[35px]
-                               rounded-2xl top-[15rem] right-[17rem] overflow-hidden"></div> */}
+                              
                                <Circle
                                       size={300}
                                      gradient="bg-gradient-to-br from-purple-500 via-purple-700 to-black"
@@ -67,10 +63,12 @@ export default async function ProjectPage(props: Props) {
                                         shadow="shadow-[0px_0px_100px_40px_black]"
                                         className="overflow-hidden"
                                         >
-                                            <img 
+                                            <Image 
                                             src={project.thumbnail}
                                             alt={project.title}
                                             className="w-full h-full"
+                                            width={800} 
+                                            height={600}
                                             />
                                 </ImageCard>           
                                 </div>
@@ -88,25 +86,6 @@ export default async function ProjectPage(props: Props) {
                                       opacity="opacity-80"
                                       shadow="shadow-[0px_0px_100px_40px_black]"
                                     />
-                              {/* Gif */}
-                              {/* <div className="rounded-full absolute bg-gradient-to-br from-red-500/80 via-red-700/80 to-black/80 w-[500px] 
-              h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hidden">
-               */}
-                                  {/* <img 
-                                  src="/images/web_animation.gif"
-                                   alt="Web animation gif"
-                                   className="w-full h-full"
-                                  /> */}
-                                  {/* <video
-                                  src="/videos/web_animation.mp4"
-                                  autoPlay
-                                  loop
-                                  muted
-                                  playsInline
-                                  className="w-full h-full object-cover"
-                                  style={{ imageRendering: 'auto', transform: 'translateZ(0)' }}
-                                />
-                              </div> */}
                             </div>
             </section>
            {/* Full Content Section */}

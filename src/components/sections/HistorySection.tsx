@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import AnimatedContent from "../animation/AnimatedContent";
@@ -63,8 +63,8 @@ export default function HistorySection() {
   content: (
     <div className="flex flex-col gap-4 text-neutral-200 text-4xl md:text-sm font-normal">
       <p>
-        I’m a developer passionate about building clean, efficient, and user-focused digital experiences.
-        Whether it’s crafting full-stack web apps with React and Next.js or building intuitive Android
+        I&apos;m a developer passionate about building clean, efficient, and user-focused digital experiences.
+        Whether it&apos;s crafting full-stack web apps with React and Next.js or building intuitive Android
         apps using Kotlin and Jetpack Compose, I love bringing ideas to life through code.
       </p>
       <p>
@@ -90,11 +90,6 @@ export default function HistorySection() {
              title=" History & Experience" 
              className="w-[30rem]"
              />
-    {/* <div className="px-8 flex flex-col justify-center items-center">
-      <h2 className="mx-auto max-w-7xl ml-4 text-neutral-200 text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 font-bold">
-       
-      </h2>
-    </div> */}
     <Timeline data={data} />
   </div>
 </div>

@@ -9,7 +9,6 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from "@tabler/icons-react";
-import Divider from "../Divider";
 import AnimatedContent from "../animation/AnimatedContent";
 import SectionTitle from "../sub-components/SectionTitle";
 
@@ -75,7 +74,6 @@ export default function ServiceSection() {
          className="w-[30rem]"
          />
         
-        {/* <Divider className="absolute left-[200px]"/> */}
        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (

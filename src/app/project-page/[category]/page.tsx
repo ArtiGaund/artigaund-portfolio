@@ -17,17 +17,7 @@ export async function generateStaticParams() {
     category,
   }));
 }
-// interface Project {
-//     id: string;
-//     title: string;
-//     shortDescription: string;
-//     fullContent: string;
-//     liveLink: string;
-//     githubLink: string;
-//     thumbnail: string;
-//     technologies: string[];
-//     status: string;
-//   }
+
   
   interface Props {
     params: {
@@ -80,13 +70,7 @@ export async function generateStaticParams() {
                         opacity="opacity-80"
                         shadow="shadow-[0px_0px_100px_40px_black]"
                       />
-                {/* <Circle
-                        size={500}
-                       gradient="bg-gradient-to-br from-purple-500 via-purple-700 to-black"
-                        position="top-[0px] right-[-65px]"
-                        opacity="opacity-80"
-                        shadow="shadow-[0px_0px_100px_40px_black]"
-                      /> */}
+                
                 {/* Gif */}
                 <div className="rounded-full absolute bg-gradient-to-br from-red-500/80 via-red-700/80 to-black/80 w-[500px] 
 h-[500px] top-[0px] right-[-65px] shadow-[0px_0px_100px_40px_black] overflow-hidden">

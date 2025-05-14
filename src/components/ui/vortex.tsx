@@ -4,7 +4,7 @@ import { createNoise3D } from "simplex-noise";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 interface VortexProps {
-  children?: any;
+  children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
   particleCount?: number;
@@ -42,9 +42,9 @@ const Vortex = (props: VortexProps) => {
   let particleProps = new Float32Array(particlePropsLength);
   let center: [number, number] = [0, 0];
 
-  const HALF_PI: number = 0.5 * Math.PI;
+  // const HALF_PI: number = 0.5 * Math.PI;
   const TAU: number = 2 * Math.PI;
-  const TO_RAD: number = Math.PI / 180;
+  // const TO_RAD: number = Math.PI / 180;
   const rand = (n: number): number => n * Math.random();
   const randRange = (n: number): number => n - rand(2 * n);
   const fadeInOut = (t: number, m: number): number => {
@@ -82,17 +82,17 @@ const Vortex = (props: VortexProps) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    let x, y, vx, vy, life, ttl, speed, radius, hue;
+    let x, y, vx, vy, life;
 
     x = rand(canvas.width);
     y = center[1] + randRange(rangeY);
     vx = 0;
     vy = 0;
     life = 0;
-    ttl = baseTTL + rand(rangeTTL);
-    speed = baseSpeed + rand(rangeSpeed);
-    radius = baseRadius + rand(rangeRadius);
-    hue = baseHue + rand(rangeHue);
+    const ttl = baseTTL + rand(rangeTTL);
+    const speed = baseSpeed + rand(rangeSpeed);
+    const radius = baseRadius + rand(rangeRadius);
+    const hue = baseHue + rand(rangeHue);
 
     particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
   };
@@ -130,7 +130,7 @@ const Vortex = (props: VortexProps) => {
       i7 = 6 + i,
       i8 = 7 + i,
       i9 = 8 + i;
-    let n, x, y, vx, vy, life, ttl, speed, x2, y2, radius, hue;
+    let n, x, y, vx, vy, life, ttl, speed, radius, hue;
 
     x = particleProps[i];
     y = particleProps[i2];
@@ -140,8 +140,8 @@ const Vortex = (props: VortexProps) => {
     life = particleProps[i5];
     ttl = particleProps[i6];
     speed = particleProps[i7];
-    x2 = x + vx * speed;
-    y2 = y + vy * speed;
+    const x2 = x + vx * speed;
+    const y2 = y + vy * speed;
     radius = particleProps[i8];
     hue = particleProps[i9];
 
@@ -234,7 +234,7 @@ const Vortex = (props: VortexProps) => {
         resize(canvas, ctx);
       }
     });
-  }, []);
+  }, [setup, resize]);
 
   return (
     <div className={cn("relative h-full w-full", props.containerClassName)}>

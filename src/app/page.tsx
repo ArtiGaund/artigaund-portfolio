@@ -3,7 +3,7 @@ import {LatestWorkSection} from "@/components/sections/LatestWorkSection";
 import ServiceSection from "@/components/sections/ServiceSection";
 import SkillSection from "@/components/sections/SkillSection";
 import HistorySection from "../components/sections/HistorySection";
-import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
    
@@ -13,7 +13,6 @@ export default function Home() {
         <ServiceSection />
         <SkillSection />
         <HistorySection />
-        {/* <Footer /> */}
       </div>
   );
 }

@@ -2,7 +2,6 @@
 import React from "react";
 import { Radar } from "../radar/Radar";
 import { IconContainer } from "../radar/IconContainer";
-import { AiFillDollarCircle } from "react-icons/ai";
 import AnimatedContent from "../animation/AnimatedContent";
 import SectionTitle from "../sub-components/SectionTitle";
 import { 
@@ -62,8 +61,10 @@ const iconData = [
   { icon: <SiHtml5 className="h-6 w-6 text-orange-500 z-20" />, text: "HTML", x: "30%", y: "10%" },
   { icon: <SiCss3 className="h-6 w-6 text-blue-600 z-20" />, text: "CSS", x: "90%", y: "90%" },
   { icon: <SiSass className="h-6 w-6 text-pink-500 z-20" />, text: "Sass", x: "10%", y: "90%" },
-  
-  
+  { icon: <SiGit className="h-6 w-6 text-orange-500 z-20" />, text: "Git", x: "90%", y: "10%"},
+  { icon: <SiGithub className="h-6 w-6 text-white z-20"/>, text: "GitHub", x: "10%", y: "10%" },
+  { icon: <SiPython className="h-6 w-6 text-white z-20"/>, text: "Python", x: "50%", y: "30%" },
+  { icon: <SiFlutter className="h-6 w-6 text-white z-20"/>, text: "Flutter", x: "70%", y: "30%" },
 ];
 export default function SkillSection() {
   return (
@@ -101,12 +102,6 @@ export default function SkillSection() {
   <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 p-8 h-full">
     <div className="relative w-full h-[24rem] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] flex items-center justify-center m-[30px]">
       <Radar className="absolute z-10 w-[16rem] h-[16rem]" />
-      {/* <IconContainer
-        text="Web Development"
-        delay={0.3}
-        icon={<AiFillDollarCircle className="h-8 w-8 text-sky-500" />}
-        className="absolute z-20"
-      /> */}
       {iconData.map((item,idx) => (
         <div
         key={idx}

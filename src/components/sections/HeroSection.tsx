@@ -82,7 +82,7 @@ export default function HeroSection() {
 
       {/* Name */}
       <div className="absolute top-1/2 left-[61rem] transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-purple-500 z-30">
-        Hi, i'm Arti Gaund
+        Hi, I&apos;m Arti Gaund
       </div>
 
       {/* Description */}
