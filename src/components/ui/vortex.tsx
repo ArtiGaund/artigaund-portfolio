@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "motion/react";
-
+import dynamic from "next/dynamic";
 interface VortexProps {
   children?: any;
   className?: string;
@@ -17,7 +17,7 @@ interface VortexProps {
   backgroundColor?: string;
 }
 
-export const Vortex = (props: VortexProps) => {
+const Vortex = (props: VortexProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef(null);
   const particleCount = props.particleCount || 700;
@@ -253,3 +253,5 @@ export const Vortex = (props: VortexProps) => {
     </div>
   );
 };
+
+export default dynamic(() => Promise.resolve(Vortex), { ssr: false });

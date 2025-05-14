@@ -3,7 +3,7 @@ import ImageCard from "../cards/ImageCard";
 import Circle from "../sub-components/Circle";
 import { CodeBlock } from "../ui/code-block";
 import { SocialNetworkLink } from "../ui/social-network-link";
-import { Vortex } from "../ui/vortex";
+import  Vortex  from "../ui/vortex";
 import AboutSection from "./AboutSection";
 import BgAnimation from "@/components/ui/BackgroundAnimation";
 
