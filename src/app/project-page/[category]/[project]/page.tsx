@@ -1,10 +1,13 @@
 
-import { getProjectPosts } from "@/backend/notion";
+import { getNotionPageContent, getProjectPosts } from "@/backend/notion";
 import ImageCard from "@/components/cards/ImageCard";
 import Circle from "@/components/sub-components/Circle";
 import SectionTitle from "@/components/sub-components/SectionTitle";
 import { Project } from "@/store/projectStore";
-
+import { 
+    IconBrandGithub,
+    IconExternalLink
+    } from "@tabler/icons-react"
 interface Props{
     params: {
         category: string;
@@ -19,6 +22,8 @@ export default async function ProjectPage(props: Props) {
     const project = projects.find((p) => p.id === projectId);
     console.log("Project data in project page:", project);
 
+    
+
     if(!project){
         return (
             <p className="text-white">
@@ -27,6 +32,8 @@ export default async function ProjectPage(props: Props) {
         )
     }
 
+    // Fetch full content from Notion
+  const fullContentBlocks = await getNotionPageContent(project.fullContent);
     return(
         <div className="text-center">
             <section className="relative flex flex-col justify-center items-center">
@@ -102,30 +109,61 @@ export default async function ProjectPage(props: Props) {
                               </div> */}
                             </div>
             </section>
-            <section className="relative  mt-[150px] flex flex-col justify-center items-center">
-                <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
-                    <SectionTitle 
-                        title="Project Detail Description" 
-                        className="w-[30rem]"
-                    />
-                </div>
-            </section>
-            <section className="relative  mt-[150px] flex flex-col justify-center items-center">
-                <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
-                    <SectionTitle 
-                        title="Technologies Used" 
-                        className="w-[30rem]"
-                    />
-                </div>
-            </section>
-            <section className="relative  mt-[150px] flex flex-col justify-center items-center">
-                <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
-                    <SectionTitle 
-                        title="Links" 
-                        className="w-[30rem]"
-                    />
-                </div>
-            </section>
+           {/* Full Content Section */}
+      <section className="relative mt-[150px] flex flex-col justify-center items-center">
+        <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
+          <SectionTitle title="Project Detail Description" className="w-[30rem]" />
+          <div className="mt-8 text-left text-white">
+            {fullContentBlocks.map((block: any, index: number) => {
+              if (block.type === "paragraph") {
+                return (
+                  <p key={index} className="mb-4">
+                    {block.paragraph.rich_text.map((text: any) => text.plain_text).join(" ")}
+                  </p>
+                );
+              }
+              if (block.type === "heading_1") {
+                return (
+                  <h1 key={index} className="text-2xl font-bold mb-4">
+                    {block.heading_1.rich_text.map((text: any) => text.plain_text).join(" ")}
+                  </h1>
+                );
+              }
+              if (block.type === "heading_2") {
+                return (
+                  <h2 key={index} className="text-xl font-semibold mb-4">
+                    {block.heading_2.rich_text.map((text: any) => text.plain_text).join(" ")}
+                  </h2>
+                );
+              }
+              if (block.type === "bulleted_list_item") {
+                return (
+                  <li key={index} className="list-disc ml-6">
+                    {block.bulleted_list_item.rich_text.map((text: any) => text.plain_text).join(" ")}
+                  </li>
+                );
+              }
+              // Add more block types as needed
+              return null;
+            })}
+          </div>
+          <div>
+            <div className="flex justify-between items-center">
+    {/* Left side: GitHub + Live link */}
+    <div className="flex gap-3">
+      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="w-8 h-8">
+        <IconBrandGithub className="w-full h-full text-neutral-300" />
+      </a>
+      {project.liveLink && (
+        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="w-8 h-8">
+          <IconExternalLink className="w-full h-full text-neutral-300" />
+        </a>
+      )}
+    </div>
+    </div>
+          </div>
+        </div>
+      </section>
         </div>
     )
 }

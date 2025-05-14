@@ -28,3 +28,8 @@ export async function getProjectPosts() {
     //     console.log("Project data ",project);
     // })
 }
+
+export async function getNotionPageContent(pageId: string) {
+  const blocks = await notion.blocks.children.list({ block_id: pageId });
+  return blocks.results;
+}
