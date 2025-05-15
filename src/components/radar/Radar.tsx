@@ -1,9 +1,11 @@
 "use client"
-import React from "react"
+import React, { CSSProperties } from "react"
 import { twMerge } from "tailwind-merge"
 import { motion } from "framer-motion"
-
-export const Radar = ({ className }: any) => {
+interface RadarProps {
+  className?: string; // Optional string for className
+}
+export const Radar = ({ className }: RadarProps) => {
     const circles = new Array(8).fill(1);
     return(
         <div
@@ -39,8 +41,14 @@ export const Radar = ({ className }: any) => {
     )
 } 
 
+interface CircleProps {
+  className?: string; // Optional string for className
+  idx: number; // Index of the circle
+  style?: CSSProperties; // Inline styles
+}
+
 // Creating circles
-export const Circle = ({ className, children, idx, ...rest }: any) => {
+export const Circle = ({ className, idx, ...rest }: CircleProps) => {
     return (
         <motion.div
         {...rest}

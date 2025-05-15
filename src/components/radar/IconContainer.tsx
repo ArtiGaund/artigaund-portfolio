@@ -8,16 +8,12 @@ interface IconContainerProps {
     icon?: React.ReactNode;
     text?: string;
     delay?: number;
-    slowLabel?: boolean;
-    size?: number;
 }
 
 export const IconContainer = ({
     icon,
     text,
     delay=0,
-    slowLabel=false,
-    size=48,
  }: IconContainerProps) => {
     return(
         <motion.div

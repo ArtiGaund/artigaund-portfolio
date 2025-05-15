@@ -19,10 +19,6 @@ export const AnimatedAboutSection = ({
 }) => {
   const [active, setActive] = useState(0);
 
-  const handleNext = () => {
-    setActive((prev) => (prev + 1) % testimonials.length);
-  };
-
   
 
   const isActive = (index: number) => {
@@ -30,20 +26,23 @@ export const AnimatedAboutSection = ({
   };
 
   useEffect(() => {
-    if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [autoplay]);
+  if (autoplay) {
+    const handleNext = () => {
+      setActive((prev) => (prev + 1) % testimonials.length);
+    };
 
+    const interval = setInterval(handleNext, 5000);
+    return () => clearInterval(interval);
+  }
+}, [autoplay, testimonials.length]);
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-sm mx-auto antialiased font-sans py-8">
       <div className="relative grid grid-cols-1  gap-20">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-[500px] w-[475px]">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div

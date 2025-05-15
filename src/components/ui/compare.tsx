@@ -34,7 +34,7 @@ export const Compare = ({
 
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const [isMouseOver, setIsMouseOver] = useState(false);
+  const [, setIsMouseOver] = useState(false);
 
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -83,14 +83,12 @@ export const Compare = ({
     startAutoplay();
   }
 
-  const handleStart = useCallback(
-    (clientX: number) => {
-      if (slideMode === "drag") {
-        setIsDragging(true);
-      }
-    },
-    [slideMode]
-  );
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const handleStart = useCallback((clientX: number) => {
+  if (slideMode === "drag") {
+    setIsDragging(true);
+  }
+}, [slideMode]);
 
   const handleEnd = useCallback(() => {
     if (slideMode === "drag") {

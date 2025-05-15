@@ -12,11 +12,11 @@ export default function HistorySection() {
       content: (
         <div className="flex flex-col">
           <div>
-              <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">Gssoc'24 & Ssoc'24</h4>
+              <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">Gssoc&apos;24 & Ssoc&apos;24</h4>
           </div>
           <span className="text-blue-400 my-[10px]">May 2024 - Aug 2024</span>
           <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Work as a Contributor for Gssoc'24 for Open Source Program
+            Work as a Contributor for Gssoc&apos;24 for Open Source Program
           </p>
 
 

@@ -1,10 +1,9 @@
 // "use client";
-import Image from "next/image";
+
 import React  from "react";
 import { Carousel } from "@/components/ui/cards-carousel";
 import AnimatedContent from "../animation/AnimatedContent";
 import SectionTitle from "../sub-components/SectionTitle";
-import { Project } from "@/store/projectStore";
 import { getProjectPosts } from "@/backend/notion";
 import ProjectContentCard from "../cards/ProjectContentCard";
 
@@ -16,7 +15,7 @@ export async function LatestWorkSection() {
   const currentProjects = await getProjectPosts();
 
   console.log("Projects in latest work section", currentProjects);
-  const cards = currentProjects.map((project, index) => (
+  const cards = currentProjects.map((project) => (
     <ProjectContentCard key={project.id} project={project} category={"web"} />
   ));
 

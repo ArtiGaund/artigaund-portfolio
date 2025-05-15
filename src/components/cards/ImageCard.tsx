@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ImageCard({
     width,
     height,
@@ -11,8 +13,8 @@ export default function ImageCard({
     height: number;
     color?: string;
     position: string;
-    shadow: string;
-    children: any;
+    shadow?: string;
+    children: React.ReactNode;
     className?: string;
 }){
     return(

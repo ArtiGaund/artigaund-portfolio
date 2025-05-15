@@ -11,7 +11,7 @@
           smoothWheel: true,
         });
 
-        function raf(time: any) {
+        function raf(time: number) {
           lenis.raf(time);
           requestAnimationFrame(raf);
         }

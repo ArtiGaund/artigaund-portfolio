@@ -1,5 +1,3 @@
-
-
 export interface Project {
   id: string;
   title: string;
@@ -9,7 +7,6 @@ export interface Project {
   githubLink: string;
   thumbnail: string;
   technologies: string[];
-  status: string;
-  category: string;
+  status?: string; // optional if sometimes missing
+  category?: string; // optional if sometimes missing
 }
-
