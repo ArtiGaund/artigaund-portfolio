@@ -4,7 +4,6 @@ import {
     IconBrandGithub,
     IconBrandX,
     IconBrandLinkedin,
-    IconBrandGmail
 } from "@tabler/icons-react"
 
 export function SocialNetworkLink() {
@@ -29,13 +28,6 @@ export function SocialNetworkLink() {
                 <IconBrandX className="h-full w-full text-neutral-300"/>
             ),
             href: "https://x.com/ArtiGaund",
-        },
-        {
-            title: "Gmail",
-            icon: (
-                <IconBrandGmail className="h-full w-full text-neutral-300"/>
-            ),
-            href: "#",
         }
     ];
     return (

@@ -4,7 +4,6 @@ import {
     IconBrandGithub,
     IconBrandX,
     IconBrandLinkedin,
-    IconBrandGmail
 } from "@tabler/icons-react"
 import Image from "next/image"
 
@@ -38,9 +37,7 @@ export default function Footer() {
                         <a href="https://x.com/ArtiGaund">
                             <IconBrandX className="h-full w-full text-neutral-300"/>
                         </a>
-                        <a href="#">
-                            <IconBrandGmail className="h-full w-full text-neutral-300"/>
-                        </a>
+                       
                     </nav>
                 </span>
             </div>

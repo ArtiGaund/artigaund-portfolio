@@ -1,5 +1,6 @@
 "use client";
 import ImageCard from "../cards/ImageCard";
+import EmailDetails from "../EmailDetails";
 import Circle from "../sub-components/Circle";
 import { CodeBlock } from "../ui/code-block";
 import { SocialNetworkLink } from "../ui/social-network-link";
@@ -54,14 +55,14 @@ export default function HeroSection() {
         <ImageCard 
         width={475}
         height={600}
-        color="bg-red-500"
+        // color="bg-red-500"
         position="top-[-50px] left-[300px] z-20"
-        shadow="shadow-[0px_0px_100px_40px_black]"
+        // shadow="shadow-[0px_0px_100px_40px_black]"
         className="w-full h-full pointer-events-none"
         >
           {/* <Boxes /> */}
           <div className="w-full h-full top-[-50px] left-[300px] z-20">
-            {/* <AboutSection /> */}
+            <AboutSection />
           </div>
     
           </ImageCard>
@@ -82,6 +83,17 @@ export default function HeroSection() {
       I’m a full-stack web and Android developer passionate about building modern, scalable applications. I typically work on frontend, backend, and mobile projects.
       </div>
       <BgAnimation />
+
+      {/* Connect with me
+      <div className="absolute top-[75%] left-[55rem] z-30">
+        <span>Connect with me</span>
+      </div> */}
+
+      {/* Email copy */}
+      <div className="absolute z-30 top-[80%] left-[55rem]">
+          <EmailDetails />
+      </div>
+      
       {/* Right big circle */}
       <Circle
         size={500}
