@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiCopy, FiCheck } from "react-icons/fi";
 import { useCopyToClipboard} from "usehooks-ts"
 export default function EmailDetails() {
-    const [value, copy] = useCopyToClipboard();
+    const [, copy] = useCopyToClipboard();
     const [copied, setCopied] = useState(false);
 
     return (
