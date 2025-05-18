@@ -100,8 +100,9 @@ export default function SkillSection() {
   delay={300}
 >
   <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 p-8 h-full">
-    <div className="relative w-full h-[24rem] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] flex items-center justify-center m-[30px]">
-      <Radar className="absolute z-10 w-[16rem] h-[16rem]" />
+    <div className="relative w-full h-[32rem] md:h-[38rem] lg:h-[40rem] flex items-center justify-center">
+  <div className="relative w-full h-full flex items-center justify-center">
+      <Radar className="absolute z-10 h-[12rem] w-[12rem] md:w-[16rem] md:h-[16rem] lg:w-[16rem] lg:h-[16rem]" />
       {iconData.map((item,idx) => (
         <div
         key={idx}
@@ -119,6 +120,7 @@ export default function SkillSection() {
           />
           </div>
       ))}
+    </div>
     </div>
   </div>
 </AnimatedContent>

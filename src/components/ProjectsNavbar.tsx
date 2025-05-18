@@ -13,21 +13,21 @@ export function ProjectsNavbar({ onClose }: Props) {
       
       {/* Left Column (Links) */}
       <div className="flex flex-col justify-center items-center flex-1 space-y-4">
-        <Link href="/project-page/web" className="text-white text-lg" onClick={onClose}>
+        <Link href="/project-page/web" prefetch className="text-white text-lg" onClick={onClose}>
           Web Development
         </Link>
-        <Link href="/project-page/android" className="text-white text-lg" onClick={onClose}>
+        <Link href="/project-page/android" prefetch className="text-white text-lg" onClick={onClose}>
           Mobile App Development
         </Link>
       </div>
 
       {/* Middle Divider */}
-      <div className="h-[90%] w-[1px] bg-white"></div>
+<div className="hidden sm:flex h-[90%] w-[1px] bg-white"></div>
 
-      {/* Right Column (Image) */}
-      <div className="flex justify-center items-center flex-1">
-        <CompareDemo />
-      </div>
+{/* Right Column (Image) */}
+<div className="hidden sm:flex justify-center items-center flex-1">
+  <CompareDemo />
+</div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Footer() {
     return(
         <footer className="text-gray-400 bg-gray-900 body-font">
             
-           <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+           <div className="container md:px-2 md:py-3 lg:px-5 lg:py-4 mx-auto flex items-center sm:flex-row flex-col">
 
                
                <aside className="grid grid-flow-col items-cente gap-4">

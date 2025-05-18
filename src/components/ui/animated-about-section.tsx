@@ -42,7 +42,7 @@ export const AnimatedAboutSection = ({
     <div className="max-w-sm mx-auto antialiased font-sans py-8">
       <div className="relative grid grid-cols-1  gap-20">
         <div>
-          <div className="relative h-[500px] w-[475px]">
+          <div className="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px] lg:w-[475px] lg:h-[500px] mx-auto">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div

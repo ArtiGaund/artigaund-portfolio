@@ -62,16 +62,16 @@ export default function HistorySection() {
   title: "About Me",
   content: (
     <div className="flex flex-col gap-4 text-neutral-200 text-4xl md:text-sm font-normal">
-      <p>
+      <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
         I&apos;m a developer passionate about building clean, efficient, and user-focused digital experiences.
         Whether it&apos;s crafting full-stack web apps with React and Next.js or building intuitive Android
         apps using Kotlin and Jetpack Compose, I love bringing ideas to life through code.
       </p>
-      <p>
+      <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
         With a strong foundation in both frontend and backend development, I focus on writing scalable,
         maintainable solutions that balance functionality and design.
       </p>
-      <p>
+      <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
         Beyond building, I enjoy learning and contributing to open-source, constantly evolving my skills
         to stay in sync with modern development trends.
       </p>
@@ -82,13 +82,13 @@ export default function HistorySection() {
   ];
   return (
      <AnimatedContent direction="vertical" distance={150} delay={200}>
-    <section className="mt-[150px] flex flex-col justify-center items-center mb-[150px]">
+    <section className="mt-[150px] flex flex-col justify-center items-center mb-[150px] px-4">
        <div className="relative border border-blue-700 bg-gradient-to-br from-white/5 to-white/5 backdrop-blur-md rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)] ring-1 ring-inset ring-white/10 w-full max-w-7xl p-8">
   {/* All content above noise */}
   <div className="relative z-10">
     <SectionTitle
              title=" History & Experience" 
-             className="w-[30rem]"
+             className="w-[20rem] lg:w-[30rem] md:w-[30rem]"
              />
     <Timeline data={data} />
   </div>
