@@ -38,8 +38,8 @@ export default async function ProjectsPage({ params }: Props) {
   return (
     <div className="text-center">
       <section className="relative flex flex-col justify-center items-center">
-        <div className="relative flex flex-row w-full h-[20rem]">
-          <div className="relative flex justify-center items-center md:w-[30rem] lg:w-2/3 top-[4rem] left-[40px] md:top-[4rem] lg:top-[4rem]">
+        <div className="relative flex flex-row w-full min-h-[20rem]">
+          <div className="relative flex justify-center items-center md:w-[30rem] lg:w-2/3 top-[4rem] left-[50px] md:left-[-8px] md:top-[3rem] lg:top-[4rem]">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 drop-shadow-lg capitalize">
               {category} Development Projects
             </h1>
@@ -52,7 +52,7 @@ export default async function ProjectsPage({ params }: Props) {
               // position="top-[-50px] right-[-100px]"
               opacity="opacity-80"
               shadow="shadow-[0px_0px_100px_40px_black]"
-              className="md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] lg:top-[-50px] lg:right-[-100px]"
+              className="md:w-[500px] md:h-[500px] lg:w-[600px] md:right-[-200px] lg:h-[600px] lg:top-[-50px] lg:right-[-100px]"
             />
             { category === "web" && <VideoPlayer src="/videos/web1.mp4"/> }
             { category === "android" && <VideoPlayer src="/videos/android.mp4"/> }
