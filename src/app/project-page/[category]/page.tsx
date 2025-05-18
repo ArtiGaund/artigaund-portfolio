@@ -39,8 +39,8 @@ export default async function ProjectsPage({ params }: Props) {
     <div className="text-center">
       <section className="relative flex flex-col justify-center items-center">
         <div className="relative flex flex-row w-full min-h-[20rem]">
-          <div className="relative flex justify-center items-center md:w-[30rem] lg:w-2/3 top-[4rem] left-[50px] md:left-[-8px] md:top-[3rem] lg:top-[4rem]">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 drop-shadow-lg capitalize">
+          <div className="relative flex justify-center items-center md:w-[30rem] lg:w-2/3 top-[4rem] left-[50px] md:left-[5px] md:top-[5rem] lg:top-[4rem]">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl md:h-[12rem] lg:h-[100px] font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 drop-shadow-lg capitalize">
               {category} Development Projects
             </h1>
           </div>
