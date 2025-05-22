@@ -32,6 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Arti Gaund | Developer Portfolio</title>
+        <meta property="og:title" content="Arti Gaund | Developer Portfolio" />
+        <meta property="og:description" content="Explore my projects, tech skills, and more!" />
+        <meta property="og:image" content="https://res.cloudinary.com/artigaund/image/upload/v1747236408/Portfolio/Web%20Development/Screenshot_500_yx7dqa.png" />
+        <meta property="og:url" content="https://artigaund-portfolio.vercel.app/" />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-101 text-white min-h-screen flex flex-col`}
       >
